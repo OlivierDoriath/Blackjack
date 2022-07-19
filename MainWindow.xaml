@@ -1,0 +1,57 @@
+﻿<Window x:Class="Blackjack.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Blackjack"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" >
+    <Grid Name ="mainGrid" SnapsToDevicePixels="True" ShowGridLines="True">
+        <Image x:Name="background" Source="./grass-plant-ground-lawn-texture-plastic-1401896-pxhere.com.jpg" Stretch="UniformToFill"/>
+        <Button x:Name="playButton" Content="  Play  " FontSize="24" FontFamily="Arial" Foreground="#FF1D1D1D" Background="#FFDADADA" Click="Button_Click" Visibility="Visible" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,301,0,0" d:IsHidden="True">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="title" Content="Blackjack!!!" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" FontWeight="Bold" BorderBrush="White" SnapsToDevicePixels="True" Foreground="White" Visibility="Visible" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <StackPanel x:Name="playerCards" Height="100" VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Center"/>
+        <StackPanel x:Name="dealerCards" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Height="100"/>
+        <StackPanel x:Name="playPanel" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Orientation="Horizontal" Visibility="Visible" Margin="0,0,0,50" d:IsHidden="True">
+            <Button x:Name="dealButton" Content="Deal" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Margin="4,4,4,4" FontFamily="Arial" Click="dealButton_Click"/>
+            <Button x:Name="standButton" Content="Stand" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Margin="4,4,4,4" FontFamily="Arial" Click="standButton_Click"/>
+            <Button x:Name="doubleButton" Content="Double Down!" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial" Click="doubleButton_Click"/>
+        </StackPanel>
+        <StackPanel x:Name="betPanel" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Orientation="Horizontal" Visibility="Visible" Margin="0,0,0,47" d:IsHidden="True">
+            <Button x:Name="betOneButton" Content="Bet $1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Margin="4,4,4,4" FontFamily="Arial" Click="betOneButton_Click"/>
+            <Button x:Name="betFiveButton" Content="Bet $5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Margin="4,4,4,4" FontFamily="Arial" Click="betFiveButton_Click"/>
+            <Button x:Name="betTenButton" Content="Bet $10" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial" Click="betTenButton_Click" Margin="4,4,4,4"/>
+            <Button x:Name="betTwentyfiveButton" Content="Bet $25" FontSize="24" FontFamily="Arial" Click="betTwentyfiveButton_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4,4,4,4"/>
+            <Button x:Name="betFiftyButton" Content="Bet $50" FontSize="24" FontFamily="Arial" Click="betFiftyButton_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4,4,4,4"/>
+            <Button x:Name="allInButton" Content="GO ALL IN!" FontSize="24" FontFamily="Arial" Click="allInButton_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4,4,4,4"/>
+        </StackPanel>
+        <Label x:Name="fundsLabel" Content="Funds: $100" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontFamily="Bahnschrift" Margin="0,50,0,0" Visibility="Visible" Foreground="#FFCECECE" d:IsHidden="True">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="playerScore" Content="Score: " HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="36" FontFamily="Bahnschrift" Margin="0,0,0,100" Visibility="Visible" Foreground="#FFCECECE" d:IsHidden="True">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="dealerScore" Content="Dealer Score: " HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" FontFamily="Bahnschrift" Visibility="Visible" Foreground="#FFCECECE" Margin="0,100,0,0" d:IsHidden="True">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="betLabel" Content="Bet: $0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" FontFamily="Bahnschrift" Margin="0,215,0,0" Visibility="Visible" Foreground="#FFCECECE" d:IsHidden="True">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+    </Grid>
+</Window>
